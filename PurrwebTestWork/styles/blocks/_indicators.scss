@@ -1,0 +1,75 @@
+.indicators {
+  @include flex-row;
+  gap: 100px;
+  justify-content: center;
+  background-color: $elementPurple;
+  padding: 40px 0;
+  &__item {
+    @include flex-column;
+    color: $textWhite;
+    .item {
+      &__title {
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 106%;
+        margin-bottom: 16px;
+      }
+      &__text {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .indicators {
+    width: 100%;
+    padding: 40px 100px;
+    @include flex-column;
+    gap: 40px;
+    &__item {
+      @include flex-row;
+      .item {
+        &__title {
+          font-size: 54px;
+          margin: auto 30px auto 0;
+        }
+        &__text {
+          margin: auto auto auto 0;
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .indicators {
+    padding: 40px 5px 40px 16px;
+    &__item {
+      .item {
+        &__title {
+          font-size: 40px;
+          margin-right: 20px;
+        }
+        &__text {
+          font-size: 20px;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .indicators {
+    padding-top: 14px;
+    padding-bottom: 19px;
+  }
+}

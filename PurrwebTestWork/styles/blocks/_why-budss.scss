@@ -1,0 +1,260 @@
+@import "../variables";
+@import "../mixin";
+
+.why-budss {
+  padding: 100px 0;
+  @include flex-column;
+  background: $backgroundColorBlack;
+  width: 1300px;
+
+  &__title {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106%;
+    margin: 0 auto 20px;
+    color: $textWhite;
+  }
+  &__intro {
+    @include text-36-white;
+    text-align: center;
+    margin: 0 auto 70px;
+    background-image: url("../../img/steak2.svg");
+    background-position: right 50% bottom;
+    background-repeat: no-repeat;
+  }
+
+  &__list {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    width: 1300px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    background-repeat: no-repeat;
+    background-color: $backgroundCardItem;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    .item {
+      &__title {
+        @include subtitle-48;
+        color: $textBlack;
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        color: $textBlack;
+      }
+    }
+
+    &:nth-child(1) {
+      background-image: url("../../img/thesis1.svg");
+      background-position: left bottom;
+      width: 56.385%;
+      .item__content {
+        @include flex-column;
+        width: 364px;
+        margin: 40px 40px 50px auto;
+        .item__text {
+          padding-right: 10px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      background-image: url("../../img/thesis2.svg");
+      background-position: right bottom;
+      width: 42.08%;
+      .item__content {
+        @include flex-column;
+        width: 416px;
+        margin: 40px auto 82px 40px;
+      }
+    }
+    &:nth-child(3) {
+      background-image: url("../../img/thesis3.svg");
+      background-position: right bottom;
+      width: 42.08%;
+      margin-bottom: 0;
+      .item__content {
+        width: 440px;
+        margin: 40px auto 50px 40px;
+      }
+      .item__text {
+        padding-right: 115px;
+      }
+    }
+    &:nth-child(4) {
+      background-image: url("../../img/thesis4.svg");
+      background-position: right 40px bottom;
+      width: 56.385%;
+      margin-bottom: 0;
+      .item__content {
+        margin: 40px auto 86px 40px;
+        width: 405px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .why-budss {
+    width: 100%px;
+    &__title {
+      font-size: 60px;
+    }
+
+    &__list {
+      @include flex-column;
+      gap: 20px;
+      width: 100%;
+
+      .why-budss__item {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .why-budss {
+    width: 100%;
+    &__title {
+      font-size: 40px;
+      margin: 0 auto 20px;
+    }
+    &__intro {
+      width: 352px;
+      @include text-36-white-transform-24-mob;
+      margin: 0 auto 40px;
+      padding: 0;
+      background-size: 69%;
+      background-position: right bottom;
+      br {
+        display: none;
+      }
+    }
+
+    &__list {
+      @include flex-column;
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100;
+      margin: 0 auto;
+      .why-budss__item {
+        padding: 20px;
+        width: 343px;
+        min-height: 362px;
+        margin: 0 auto;
+        .item {
+          &__content {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+          }
+          &__title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 106%;
+            color: $textBlack;
+            margin-bottom: 16px;
+            width: 100%;
+          }
+          &__text {
+            font-size: 16px;
+            color: $textBlack;
+            line-height: normal;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          background-image: url("../../img/thesis-m1.svg");
+          background-position: left bottom;
+          .item__text {
+            margin-bottom: 198px;
+          }
+        }
+
+        &:nth-child(2) {
+          background-image: url("../../img/thesis-m2.svg");
+          background-position: right bottom;
+          .item__text {
+            margin-bottom: 129px;
+          }
+        }
+        &:nth-child(3) {
+          background-image: url("../../img/thesis-m3.svg");
+          background-position: right bottom;
+          .item__text {
+            margin-bottom: 95px;
+          }
+        }
+        &:nth-child(4) {
+          background-image: url("../../img/thesis-m4.svg");
+          background-position: right 40px bottom;
+          .item__text {
+            margin-bottom: 171px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 581px) {
+  .why-budss {
+    padding-bottom: 81px;
+    width: 100%;
+    &__title {
+      margin: 0 auto 20px 92px;
+    }
+    &__intro {
+      margin: 0 auto 40px 16px;
+    }
+
+    &__list {
+      .why-budss__item {
+        border-radius: 20px;
+        min-height: unset;
+        margin-bottom: 0px;
+        .item {
+          &__text {
+            padding: 0;
+          }
+        }
+
+        &:nth-child(1) {
+          .item__text {
+            margin-bottom: 177px;
+          }
+        }
+
+        &:nth-child(2) {
+          .item__text {
+            margin-bottom: 110px;
+          }
+        }
+        &:nth-child(3) {
+          .item__text {
+            margin-bottom: 95px;
+          }
+        }
+        &:nth-child(4) {
+          background-position: right 54px bottom;
+          .item__text {
+            margin-bottom: 172px;
+            padding-right: 24px;
+          }
+        }
+      }
+    }
+  }
+}

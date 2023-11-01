@@ -1,0 +1,215 @@
+.modal {
+  position: fixed;
+  border-radius: 20px;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 417px;
+  padding: 40px;
+
+  &__form {
+    @include flex-column;
+
+    .form {
+      @include flex-column;
+      &__input-block {
+        margin-bottom: 10px;
+        label {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px;
+        }
+        .tel {
+          position: relative;
+          @include flex-row;
+
+          .tel-input {
+            padding-left: 43px;
+          }
+          img {
+            width: 24px;
+            position: absolute;
+            top: 16px;
+            left: 14px;
+          }
+        }
+
+        input {
+          display: block;
+          margin: 7px 0;
+          padding: 8px 16px;
+          width: 100%;
+          border-radius: 14px;
+          border: 1px solid #f1f1f1;
+          background: #fff;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px;
+          color: #070707;
+
+          &::placeholder {
+            color: #a7a7a7;
+          }
+          &:active {
+            border: 1px solid #f1f1f1;
+          }
+          &:focus {
+            outline: none;
+            border: 1px solid #f1f1f1;
+          }
+        }
+      }
+      &__text {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        a {
+          color: #954ced;
+          cursor: pointer;
+          text-decoration-line: underline;
+        }
+      }
+      &__button {
+        margin-right: auto;
+        background-color: #b9b9b9;
+        border: none;
+      }
+      &__close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+      }
+    }
+  }
+  .error-message {
+    color: red;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  .error-message_big {
+    font-size: 16px;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .borderRed {
+    border-color: red !important;
+    margin: 4px 0 !important;
+  }
+}
+
+.super {
+  padding: 40px;
+  width: 417px;
+
+  img {
+    display: flex;
+    margin-bottom: 0 auto 20px auto;
+  }
+  &__header {
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: $elementPurple;
+    margin-bottom: 20px;
+  }
+  &__text {
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+  &__button {
+    cursor: pointer;
+    padding: 16px 30px;
+    background: $elementPurple;
+    color: $textWhite;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  &__close {
+    cursor: pointer;
+    background-color: $backgroundColorWhite;
+    border: none;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .modal {
+    width: 335px;
+    padding: 16px;
+
+    &__form {
+      .form {
+        &__close {
+          top: 8px;
+        }
+      }
+    }
+  }
+
+  .super {
+    width: 335px;
+    padding: 40px 24px;
+    @include flex-column;
+    &__content {
+      img {
+        width: 68%;
+        margin-left: 40px;
+        padding-top: 14px;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__header {
+      font-size: 24px;
+      line-height: 120%;
+      text-align: center;
+      font-weight: 600;
+      color: $elementPurple;
+      margin-bottom: 22px;
+    }
+    &__text {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__button {
+      width: 255px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &__close {
+      top: 14px;
+      right: 12px;
+    }
+  }
+}

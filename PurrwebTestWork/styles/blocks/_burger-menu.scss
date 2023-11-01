@@ -1,0 +1,36 @@
+.menu-burger {
+  padding: 16px;
+  position: fixed;
+  width: 375px;
+  //   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $backgroundColorBlack;
+  overflow-y: auto;
+  z-index: 5;
+  &__nav {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    .button-contact {
+      margin-bottom: 177px;
+    }
+  }
+  &__close {
+    background-color: black;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+  }
+  &__list {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    color: $textWhite;
+  }
+  &__item {
+    margin-bottom: 16px;
+  }
+}

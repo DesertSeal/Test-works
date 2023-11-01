@@ -1,0 +1,166 @@
+.footer {
+  padding: 40px 0 20px 0;
+  width: 1320px;
+  margin-left: 60px;
+  &__links {
+    @include flex-row;
+    padding-bottom: 25px;
+    border-bottom: solid 2px #444444;
+    margin-bottom: 20px;
+  }
+
+  .links {
+    &__logo {
+      margin: 0 8px;
+      @include flex-row;
+    }
+    &__img {
+      margin-right: 5px;
+    }
+    &__text {
+      margin: auto 0;
+      font-size: 37px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 17px;
+      color: $textWhite;
+    }
+    &__menu {
+      @include flex-row;
+      justify-content: space-between;
+      margin: auto 126px;
+      // max-width: 281px;
+      gap: 40px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: $textWhite;
+
+      .menu__other {
+        display: none;
+      }
+    }
+    .button-contact {
+      margin-right: 40px;
+    }
+    &__shop {
+      @include flex-row;
+      gap: 20px;
+    }
+  }
+
+  .underline {
+    @include flex-row;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    color: $textWhite;
+    &__text {
+      margin-right: auto;
+    }
+    .links {
+      &__list {
+        @include flex-row;
+        gap: 20px;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1480px) {
+  .footer {
+    width: 1000px;
+    margin: 0 auto;
+    .links {
+      justify-content: space-around;
+      &__logo {
+        margin: 0 0 auto 0;
+        @include flex-row;
+      }
+      &__menu {
+        @include flex-column;
+        margin: 0 0 auto 0;
+        gap: 20px;
+      }
+      .button-contact {
+        margin: 0 0 auto 0;
+      }
+      &__shop {
+        margin: 0 0 auto 0;
+        @include flex-column;
+        gap: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .footer {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 940px) {
+  .footer {
+    padding: 16px;
+    width: 600px;
+    .links {
+      @include flex-column;
+      gap: 40px;
+      &__menu {
+        .menu__other {
+          display: unset;
+        }
+      }
+      .button-contact {
+        margin-right: auto;
+      }
+    }
+    &__underline {
+      .underline {
+        &__links {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .footer {
+    width: 343px;
+    padding: 25px 0;
+    .links {
+      padding-bottom: 35px;
+      margin-bottom: 0;
+      .footer__button {
+        margin-right: auto;
+        width: auto;
+      }
+      &__img {
+        width: 27px;
+        margin-left: 7px;
+      }
+      &__text {
+        font-size: 29px;
+      }
+      &__menu {
+        padding-top: 4px;
+        gap: 15.5px;
+      }
+      &__shop {
+        gap: 15px;
+      }
+    }
+
+    &__underline {
+      padding-top: 11px;
+    }
+  }
+}

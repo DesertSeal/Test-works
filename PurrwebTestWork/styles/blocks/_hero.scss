@@ -1,0 +1,251 @@
+.hero {
+  margin-bottom: 97px;
+  &__navbar {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 69px;
+    .button-burger {
+      display: none;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    .logo {
+      &__img {
+        margin: 0 8px;
+      }
+      &__text {
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 17px;
+        color: $textWhite;
+      }
+    }
+  }
+
+  &__content {
+    @include flex-row;
+    color: $textWhite;
+    margin-left: 110px;
+  }
+
+  &__info {
+    margin-top: 20px;
+    max-width: 671px;
+    margin-right: auto;
+  }
+
+  &__title {
+    @include title;
+    margin-bottom: 20px;
+    p {
+      @include title;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 40px;
+    padding-right: 115px;
+  }
+
+  &__img {
+    // width: 595px;
+    min-width: 595px;
+    height: 529px;
+  }
+}
+
+@media (max-width: 1480px) {
+  .hero {
+    &__content {
+      margin-left: 110px;
+    }
+    &__info {
+      min-width: 343px;
+    }
+    &__title {
+      font-size: 60px;
+      p {
+        font-size: 60px;
+      }
+    }
+    &__text {
+      font-size: 18px;
+      line-height: normal;
+    }
+    &__img {
+      min-width: 422px;
+      height: 375px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .hero {
+    &__content {
+      margin-left: 50px;
+    }
+
+    &__title {
+      font-size: 50px;
+      p {
+        font-size: 50px;
+      }
+    }
+
+    &__img {
+      min-width: 422px;
+      height: 375px;
+    }
+  }
+}
+
+@media (max-width: 940px) {
+  .hero {
+    margin-bottom: 97px;
+
+    &__navbar {
+      @include flex-row;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 16px;
+      margin-bottom: 69px;
+    }
+    &__logo {
+      .logo {
+        &__img {
+          // margin: 0 8px;
+          // width: 19.7px;
+          // height: 23.1px;
+          width: 100%;
+          height: auto;
+        }
+        &__text {
+          font-size: 29.6px;
+          line-height: 13.6px;
+        }
+      }
+    }
+    &__content {
+      @include flex-column;
+      color: $textWhite;
+      margin-left: 16px;
+    }
+
+    &__info {
+      // margin-top: 20px;
+      margin-bottom: 50px;
+      max-width: 100%;
+    }
+
+    &__title {
+      @include title_mob;
+      margin-bottom: 20px;
+      p {
+        @include title_mob;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: normal;
+      margin-bottom: 40px;
+      padding-right: 115px;
+    }
+
+    &__img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .hero {
+    margin-bottom: 60px;
+    &__navbar {
+      margin-bottom: 69px;
+      .button-contact {
+        display: none;
+      }
+    }
+    &__logo {
+      .logo {
+        &__img {
+          width: 100%;
+          height: auto;
+        }
+        &__text {
+          font-size: 29.6px;
+          line-height: 13.6px;
+        }
+      }
+    }
+    &__content {
+      @include flex-column;
+      color: $textWhite;
+      margin-left: 16px;
+    }
+
+    &__info {
+      margin-bottom: 50px;
+      max-width: 100%;
+      margin-right: 16px;
+    }
+
+    &__title {
+      @include title_mob;
+      margin-bottom: 20px;
+      p {
+        @include title_mob;
+      }
+    }
+    &__text {
+      font-size: 16px;
+      line-height: normal;
+      margin-bottom: 40px;
+
+      padding-right: 0px;
+    }
+
+    &__img {
+      min-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .hero {
+    margin-bottom: 37px;
+    &__navbar {
+      margin-bottom: 51px;
+      .button-burger {
+        display: flex;
+      }
+    }
+    &__logo {
+      .logo {
+        &__img {
+          width: 26px;
+          margin-right: 4px;
+        }
+      }
+    }
+    &__info {
+      margin-bottom: 123px;
+    }
+    &__img {
+      min-width: unset;
+      width: 90.3%;
+      margin-left: 35px;
+    }
+  }
+}
